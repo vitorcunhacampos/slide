@@ -17,15 +17,30 @@ img {
   display: flex;
 }
 
+.slide:hover {
+  will-change: transform;
+}
+
 .slide li {
   flex-shrink: 0;
   width: 80vw;
   max-width: 800px;
   margin: 0 20px;
+  transform: scale(0.8);
+  opacity: 0.8;
+  transition: 0.4s;
+  box-shadow: 8px 8px 22px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  border-radius: 22px;
 }
 
+.slide li.active {
+  transform: scale(1);
+  opacity: 1;
+}
 .slide-wrapper {
   overflow: hidden;
+  height: 600px;
 }
 
 .slide {
